@@ -3,6 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+/* global Swal */
+
 var tiempoInactividad = 600;
 var activo_ = true;
 $(document).ready(function () {
@@ -190,4 +192,12 @@ window.onclick = function (e) {
 window.onkeydown = function (e) {
     tiempoInactividad = 600;
     activo_ = true;
+};
+
+var AlertTecmmas = function (icon, title, text) {
+    Swal.fire({
+        icon: icon,
+        title: title,
+        text: text
+    });
 };
